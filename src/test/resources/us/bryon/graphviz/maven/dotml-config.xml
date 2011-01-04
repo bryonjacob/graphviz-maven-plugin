@@ -1,0 +1,19 @@
+<project>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>us.bryon</groupId>
+                <artifactId>graphviz-maven-plugin</artifactId>
+                <configuration>
+                    <basedir>${basedir}/src/test/resources/us/bryon/graphviz/maven/dotml</basedir>
+                    <includes>**/*.xml</includes>
+                    <layout>dot</layout>
+                    <output>png</output>
+                    <destdir>target/graphviz</destdir>
+                    <dot>dot</dot>
+                    <!--<mapper></mapper>-->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

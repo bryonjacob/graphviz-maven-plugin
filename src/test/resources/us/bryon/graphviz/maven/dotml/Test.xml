@@ -1,0 +1,8 @@
+<graph xmlns="http://www.martin-loetzsch.de/DOTML"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.martin-loetzsch.de/DOTML ../../../../../../../main/resources/dotml/dotml-1.4.xsd"
+       file-name="Test">
+    <node id="A"/>
+    <node id="B"/>
+    <edge from="A" to="B"/>
+</graph>

@@ -1,0 +1,48 @@
+Getting Started
+
+    This plugin uses the {{{http://www.graphviz.org/}Graphviz}} library to render .dot files into
+    images.
+
+    The most basic usage of the plugin is to simply wire it into your POM and run the <<dot>> goal:
+
++------
+    <plugins>
+        <plugin>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${project.artifactId}</artifactId>
+            <version>${project.version}</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>dot</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        ...
+    </plugins>
++------
+
+    If you put a .dot file into <<<src/main/dot>>> (let's say, <<<src/main/dot/foo.dot>>>):
+
++------
+graph { foo--bar }
++------
+
+    It will turn that into <<<target/graphviz/foo.png>>>:
+
+[/images/foo.png] foo.png
+
+    The <<dotml>> goal is very similar - the only difference is that it expects
+    <<<src/main/dotml>>> to contain XML files in the
+    {{{http://www.martin-loetzsch.de/DOTML}DOTML}} format.
+
+    For all the features and options, read the documents for the {{{/dot-mojo.xml}graphviz:dot}}
+    and {{{/dotml-mojo.xml}graphviz:dotml}} mojos.
+
+======
+
+    <${project.artifactId} is licensed under the {{{/license.html}New BSD License}}.>
+
+    <This product includes DOTML developed by Martin Loetzsch ({{http://www.martin-loetzsch.de/DOTML}}).
+    Use of DOTML is governed by {{{http://www.martin-loetzsch.de/DOTML/licence.html}this license}}.>
