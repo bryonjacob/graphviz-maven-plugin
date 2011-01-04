@@ -1,0 +1,290 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <title>Graphviz Maven Plugin - Plugin Documentation</title>
+    <link rel="stylesheet" href="./css/maven-theme.css" type="text/css" />
+    <link rel="stylesheet" href="./css/maven-base.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/prettify.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="./js/prettify.js"></script>
+    <script type="text/javascript" src="./js/niftycube.js"></script>
+    <script type="text/javascript">
+        window.onload=function() {
+            Nifty("div\#wrapper", "big");
+            Nifty("div#breadcrumbs", "small");
+            Nifty("div\#navcolumn", "small");
+            Nifty("div.source", "medium");
+            prettyPrint();
+        }
+    </script>
+          </head>
+  <body>
+    <div id="wrapper">
+        <div id="banner">
+                        <div id="bannerLeft">
+    
+            Graphviz Maven Plugin
+    
+            </div>
+                            <div class="clear">
+            <hr/>
+          </div>
+        </div>
+        <div id="breadcrumbs">
+              
+  
+
+  
+    
+    
+  
+    
+            <div class="xleft">
+        <span id="publishDate">Last Published: 2011-01-04</span>
+                  &nbsp;| <span id="projectVersion">Version: 1.0-SNAPSHOT</span>
+                      </div>
+                <div class="xright">      
+  
+
+  
+    
+    
+  
+    
+  </div>
+          <div class="clear">
+            <hr/>
+          </div>
+        </div>
+        <div id="leftColumn">
+          <div id="navcolumn">
+               
+  
+
+  
+    
+    
+  
+    
+                       <h5>Overview</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="index.html">Getting Started</a>
+          </li>
+              
+    <li class="none">
+                    <a href="releases.html">Release Notes</a>
+          </li>
+          </ul>
+              <h5>Goals</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="dot-mojo.html">graphviz:dot</a>
+          </li>
+              
+    <li class="none">
+                    <a href="dotml-mojo.html">graphviz:dotml</a>
+          </li>
+              
+    <li class="none">
+              <strong>All Goals</strong>
+        </li>
+          </ul>
+              <h5>Project Documentation</h5>
+            <ul>
+              
+                
+                    
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              
+        <li class="collapsed">
+                    <a href="project-info.html">Project Information</a>
+                </li>
+              
+                
+                    
+                  
+                        
+                  
+                  
+                  
+                  
+              
+            <li class="expanded">
+                    <a href="project-reports.html">Project Reports</a>
+                  <ul>
+                  
+    <li class="none">
+                    <a href="cobertura/index.html">Cobertura Test Coverage</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="apidocs/index.html">JavaDocs</a>
+          </li>
+                  
+    <li class="none">
+              <strong>Plugin Documentation</strong>
+        </li>
+                  
+    <li class="none">
+                    <a href="xref/index.html">Source Xref</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="surefire-report.html">Surefire Report</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="testapidocs/index.html">Test JavaDocs</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="xref-test/index.html">Test Source Xref</a>
+          </li>
+              </ul>
+        </li>
+          </ul>
+                                               <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
+            <img class="poweredBy"
+                 alt="Built by Maven"
+                 src="./images/logos/maven-feather.png"
+                 width="90"
+                 height="30"
+                 border="1" />
+          </a>
+                           
+  
+
+  
+    
+    
+  
+    
+            </div>
+        </div>
+        <div id="bodyColumn">
+          <div id="contentBox">
+            <a name="Plugin_Documentation"></a><div class="section"><h2>Plugin Documentation</h2>
+<p>Goals available for this plugin:</p>
+<table class="bodyTable"><tr class="a"><th>Goal</th>
+<th>Description</th>
+</tr>
+<tr class="b"><td><a href="dot-mojo.html">graphviz:dot</a></td>
+<td>use Graphviz to render .dot files to images. This mojo uses <a
+href="http://www.graphviz.org/">Graphviz</a> to convert files in
+the "dot" file format. By default, this mojo assumes you have DOT
+files with the extension .dot in a directory in your maven project
+named <code>src/main/dot</code> - it will call out to the Graphviz
+binary and convert the files to PNG files and place them in
+<code>target/graphviz</code>, using the default "dot" layout for
+Graphviz. You can customize the source and target locations, the
+file format, or the layout by setting plugin configuration
+parameters.</td>
+</tr>
+<tr class="a"><td><a href="dotml-mojo.html">graphviz:dotml</a></td>
+<td>use DOTML and GraphViz to render DOTML .xml files to images. This
+mojo does much the same as the <a
+href="/dot-mojo.html">graphviz:dot</a> mojo, except that instead of
+standard Graphviz .dot files, it expects its input to be DOTML
+files, an XML dialect for .dot files. This product includes DOTML
+developed by Martin Loetzsch (<a
+href="http://www.martin-loetzsch.de/DOTML">http://www.martin-loetzsch.de/DOTML</a>).</td>
+</tr>
+</table>
+<a name="System_Requirements"></a><div class="section"><h3>System Requirements</h3>
+<p>The following specifies the minimum requirements to run this Maven plugin:</p>
+<table class="bodyTable"><tr class="b"><td>Maven</td>
+<td>2.0</td>
+</tr>
+<tr class="a"><td>JDK</td>
+<td>1.6</td>
+</tr>
+<tr class="b"><td>Memory</td>
+<td>No minimum requirement.</td>
+</tr>
+<tr class="a"><td>Disk Space</td>
+<td>No minimum requirement.</td>
+</tr>
+</table>
+</div>
+<a name="Usage"></a><div class="section"><h3>Usage</h3>
+<p>You should specify the version in your project's plugin configuration:</p>
+<div class="source"><pre>&lt;project&gt;
+  ...
+  &lt;build&gt;
+    &lt;!-- To define the plugin version in your parent POM --&gt;
+    &lt;pluginManagement&gt;
+      &lt;plugins&gt;
+        &lt;plugin&gt;
+          &lt;groupId&gt;us.bryon&lt;/groupId&gt;
+          &lt;artifactId&gt;graphviz-maven-plugin&lt;/artifactId&gt;
+          &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+        &lt;/plugin&gt;
+        ...
+      &lt;/plugins&gt;
+    &lt;/pluginManagement&gt;
+    &lt;!-- To use the plugin goals in your POM or parent POM --&gt;
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;us.bryon&lt;/groupId&gt;
+        &lt;artifactId&gt;graphviz-maven-plugin&lt;/artifactId&gt;
+        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+      &lt;/plugin&gt;
+      ...
+    &lt;/plugins&gt;
+  &lt;/build&gt;
+  ...
+&lt;/project&gt;
+</pre>
+</div>
+<p>For more information, see <a class="externalLink" href="http://maven.apache.org/guides/mini/guide-configuring-plugins.html">&quot;Guide to Configuring Plug-ins&quot;</a></p>
+</div>
+</div>
+
+          </div>
+        </div>
+        <div class="clear">
+          <hr/>
+        </div>
+        <div id="footer">
+          <div class="xright">Copyright &#169;         
+   
+          2011.
+    
+      All Rights Reserved.    
+  
+
+  
+    
+    
+  
+    
+  </div>
+          <div class="clear">
+            <hr/>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
