@@ -1,0 +1,5 @@
+h1. Graphviz Maven Plugin
+
+A maven plugin for generating graphs with Graphviz as part of your project's build lifecycle.
+
+To get started, take a look at the "maven site":http://graphviz-maven-plugin.bryon.us/ for the plugin.
