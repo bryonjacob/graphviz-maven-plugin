@@ -1,0 +1,344 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <title>Graphviz Maven Plugin - graphviz:dot</title>
+    <link rel="stylesheet" href="./css/maven-theme.css" type="text/css" />
+    <link rel="stylesheet" href="./css/maven-base.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/prettify.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="./js/prettify.js"></script>
+    <script type="text/javascript" src="./js/niftycube.js"></script>
+    <script type="text/javascript">
+        window.onload=function() {
+            Nifty("div\#wrapper", "big");
+            Nifty("div#breadcrumbs", "small");
+            Nifty("div\#navcolumn", "small");
+            Nifty("div.source", "medium");
+            prettyPrint();
+        }
+    </script>
+          </head>
+  <body>
+    <div id="wrapper">
+        <div id="banner">
+                        <div id="bannerLeft">
+    
+            Graphviz Maven Plugin
+    
+            </div>
+                            <div class="clear">
+            <hr/>
+          </div>
+        </div>
+        <div id="breadcrumbs">
+              
+  
+
+  
+    
+    
+  
+    
+            <div class="xleft">
+        <span id="publishDate">Last Published: 2011-01-04</span>
+                  &nbsp;| <span id="projectVersion">Version: 1.0-SNAPSHOT</span>
+                      </div>
+                <div class="xright">      
+  
+
+  
+    
+    
+  
+    
+  </div>
+          <div class="clear">
+            <hr/>
+          </div>
+        </div>
+        <div id="leftColumn">
+          <div id="navcolumn">
+               
+  
+
+  
+    
+    
+  
+    
+                       <h5>Overview</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="index.html">Getting Started</a>
+          </li>
+              
+    <li class="none">
+                    <a href="releases.html">Release Notes</a>
+          </li>
+          </ul>
+              <h5>Goals</h5>
+            <ul>
+              
+    <li class="none">
+              <strong>graphviz:dot</strong>
+        </li>
+              
+    <li class="none">
+                    <a href="dotml-mojo.html">graphviz:dotml</a>
+          </li>
+              
+    <li class="none">
+                    <a href="plugin-info.html">All Goals</a>
+          </li>
+          </ul>
+              <h5>Project Documentation</h5>
+            <ul>
+              
+                
+                    
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              
+        <li class="collapsed">
+                    <a href="project-info.html">Project Information</a>
+                </li>
+              
+                
+                    
+                  
+                  
+                  
+                  
+                  
+                  
+              
+        <li class="collapsed">
+                    <a href="project-reports.html">Project Reports</a>
+                </li>
+          </ul>
+                                               <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
+            <img class="poweredBy"
+                 alt="Built by Maven"
+                 src="./images/logos/maven-feather.png"
+                 width="90"
+                 height="30"
+                 border="1" />
+          </a>
+                           
+  
+
+  
+    
+    
+  
+    
+            </div>
+        </div>
+        <div id="bodyColumn">
+          <div id="contentBox">
+            <div class="section"><h2><a name="graphviz:dot"></a>graphviz:dot</h2>
+<p><strong>Full name</strong>:</p>
+<p>us.bryon:graphviz-maven-plugin:1.0-SNAPSHOT:dot</p>
+<p><strong>Description</strong>:</p>
+<div>use Graphviz to render .dot files to images. This mojo uses <a class="externalLink" href="http://www.graphviz.org/">Graphviz</a> to convert files in
+the &quot;dot&quot; file format. By default, this mojo assumes you have DOT
+files with the extension .dot in a directory in your maven project
+named <code>src/main/dot</code> - it will call out to the Graphviz
+binary and convert the files to PNG files and place them in
+<code>target/graphviz</code>, using the default &quot;dot&quot; layout for
+Graphviz. You can customize the source and target locations, the
+file format, or the layout by setting plugin configuration
+parameters.</div><p><strong>Attributes</strong>:</p>
+<ul><li>Requires a Maven 2.0 project to be executed.</li>
+<li>Binds by default to the lifecycle phase: <code>generate-sources</code>.</li>
+</ul>
+<div class="section"><h3><a name="Required_Parameters"></a>Required Parameters</h3>
+<table class="bodyTable"><tr class="a"><th>Name</th>
+<th>Type</th>
+<th>Since</th>
+<th>Description</th>
+</tr>
+<tr class="b"><td><strong><a href="#basedir">basedir</a></strong></td>
+<td><code>File</code></td>
+<td><code>-</code></td>
+<td>the base directory in which .dot files can be found.<br />
+</td>
+</tr>
+<tr class="a"><td><strong><a href="#destdir">destdir</a></strong></td>
+<td><code>File</code></td>
+<td><code>-</code></td>
+<td>destination directory into which rendered output will be written.<br />
+</td>
+</tr>
+<tr class="b"><td><strong><a href="#dot">dot</a></strong></td>
+<td><code>String</code></td>
+<td><code>-</code></td>
+<td>the graphviz binary to use. by default, it is assumed that &quot;dot&quot; is
+on your PATH - if not, this value should be set to the full path to
+the dot binary.<br />
+<strong>Default value is</strong>: <code>dot</code>.</td>
+</tr>
+<tr class="a"><td><strong><a href="#includes">includes</a></strong></td>
+<td><code>String</code></td>
+<td><code>-</code></td>
+<td>pattern of files to include (separate multiple patterns with
+commas).<br />
+<strong>Default value is</strong>: <code>**/*.dot</code>.</td>
+</tr>
+<tr class="b"><td><strong><a href="#layout">layout</a></strong></td>
+<td><code>String</code></td>
+<td><code>-</code></td>
+<td>layout to use. this can be any value that can be provided to the -K
+option of the graphviz binary - at time of writing this is
+<code>dot|neato|twopi|circo|fdp|sfdp</code>. see the man pages
+(http://www.graphviz.org/pdf/dot.1.pdf) for descriptions of the
+formats.<br />
+<strong>Default value is</strong>: <code>dot</code>.</td>
+</tr>
+<tr class="a"><td><strong><a href="#output">output</a></strong></td>
+<td><code>String</code></td>
+<td><code>-</code></td>
+<td>output format. this can be any value that can be provided to the -T
+option of the graphviz binary - the list of all known options is
+here: <a class="externalLink" href="http://www.graphviz.org/doc/info/output.html">http://www.graphviz.org/doc/info/output.html</a>.
+the set of options available on your maching may vary - run
+<code>dot -T?</code> for a list of output formats supported by your
+installation.<br />
+<strong>Default value is</strong>: <code>png</code>.</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="Optional_Parameters"></a>Optional Parameters</h3>
+<table class="bodyTable"><tr class="b"><th>Name</th>
+<th>Type</th>
+<th>Since</th>
+<th>Description</th>
+</tr>
+<tr class="a"><td><strong><a href="#excludes">excludes</a></strong></td>
+<td><code>String</code></td>
+<td><code>-</code></td>
+<td>pattern of files to exclude (separate multiple patterns with
+commas).<br />
+</td>
+</tr>
+<tr class="b"><td><strong><a href="#mapper">mapper</a></strong></td>
+<td><code>FileMapper</code></td>
+<td><code>-</code></td>
+<td>file mapper to use. provide a custom mapper used to transform input
+filenames into output - by default, the mapper used will be a
+FileExtensionMapper, using the value of <code>output</code> as the
+extension on the output file.<br />
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="Parameter_Details"></a>Parameter Details</h3>
+<p><strong><a name="basedir">basedir</a>:</strong></p>
+<div>the base directory in which .dot files can be found.</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
+<li><strong>Required</strong>: <code>Yes</code></li>
+<li><strong>Expression</strong>: <code>${project.basedir}/src/main/dot</code></li>
+</ul>
+<hr />
+<p><strong><a name="destdir">destdir</a>:</strong></p>
+<div>destination directory into which rendered output will be written.</div><ul><li><strong>Type</strong>: <code>java.io.File</code></li>
+<li><strong>Required</strong>: <code>Yes</code></li>
+<li><strong>Expression</strong>: <code>${project.build.directory}/graphviz</code></li>
+</ul>
+<hr />
+<p><strong><a name="dot">dot</a>:</strong></p>
+<div>the graphviz binary to use. by default, it is assumed that &quot;dot&quot; is
+on your PATH - if not, this value should be set to the full path to
+the dot binary.</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
+<li><strong>Required</strong>: <code>Yes</code></li>
+<li><strong>Default</strong>: <code>dot</code></li>
+</ul>
+<hr />
+<p><strong><a name="excludes">excludes</a>:</strong></p>
+<div>pattern of files to exclude (separate multiple patterns with
+commas).</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
+<li><strong>Required</strong>: <code>No</code></li>
+</ul>
+<hr />
+<p><strong><a name="includes">includes</a>:</strong></p>
+<div>pattern of files to include (separate multiple patterns with
+commas).</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
+<li><strong>Required</strong>: <code>Yes</code></li>
+<li><strong>Default</strong>: <code>**/*.dot</code></li>
+</ul>
+<hr />
+<p><strong><a name="layout">layout</a>:</strong></p>
+<div>layout to use. this can be any value that can be provided to the -K
+option of the graphviz binary - at time of writing this is
+<code>dot|neato|twopi|circo|fdp|sfdp</code>. see the man pages
+(http://www.graphviz.org/pdf/dot.1.pdf) for descriptions of the
+formats.</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
+<li><strong>Required</strong>: <code>Yes</code></li>
+<li><strong>Default</strong>: <code>dot</code></li>
+</ul>
+<hr />
+<p><strong><a name="mapper">mapper</a>:</strong></p>
+<div>file mapper to use. provide a custom mapper used to transform input
+filenames into output - by default, the mapper used will be a
+FileExtensionMapper, using the value of <code>output</code> as the
+extension on the output file.</div><ul><li><strong>Type</strong>: <code>org.codehaus.plexus.components.io.filemappers.FileMapper</code></li>
+<li><strong>Required</strong>: <code>No</code></li>
+</ul>
+<hr />
+<p><strong><a name="output">output</a>:</strong></p>
+<div>output format. this can be any value that can be provided to the -T
+option of the graphviz binary - the list of all known options is
+here: <a class="externalLink" href="http://www.graphviz.org/doc/info/output.html">http://www.graphviz.org/doc/info/output.html</a>.
+the set of options available on your maching may vary - run
+<code>dot -T?</code> for a list of output formats supported by your
+installation.</div><ul><li><strong>Type</strong>: <code>java.lang.String</code></li>
+<li><strong>Required</strong>: <code>Yes</code></li>
+<li><strong>Default</strong>: <code>png</code></li>
+</ul>
+</div>
+</div>
+
+          </div>
+        </div>
+        <div class="clear">
+          <hr/>
+        </div>
+        <div id="footer">
+          <div class="xright">Copyright &#169;         
+   
+          2011.
+    
+      All Rights Reserved.    
+  
+
+  
+    
+    
+  
+    
+  </div>
+          <div class="clear">
+            <hr/>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
