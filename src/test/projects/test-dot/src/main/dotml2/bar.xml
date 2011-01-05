@@ -1,0 +1,5 @@
+<graph xmlns="http://www.martin-loetzsch.de/DOTML" file-name="bar">
+ <node id="bar"/>
+ <node id="baz"/>
+ <edge from="baz" to="bar"/>
+</graph>

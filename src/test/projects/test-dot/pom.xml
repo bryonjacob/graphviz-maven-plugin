@@ -13,13 +13,53 @@
             <plugin>
                 <groupId>us.bryon</groupId>
                 <artifactId>graphviz-maven-plugin</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>@project.version@</version>
                 <executions>
+                    <!-- test executing the mojos with all settings at their defaults -->
                     <execution>
+                        <id>all-defaults</id>
                         <goals>
                             <goal>dot</goal>
                             <goal>dotml</goal>
                         </goals>
+                    </execution>
+                    <!-- test customizing the options for "dot" -->
+                    <execution>
+                        <id>test-dot-options</id>
+                        <goals>
+                            <goal>dot</goal>
+                        </goals>
+                        <configuration>
+                            <basedir>src/main/dot2</basedir>
+                            <destdir>target/dot2</destdir>
+                            <includes>**/*.dot</includes>
+                            <excludes>**/skipme.dot,**/skip/**</excludes>
+                            <layout>circo</layout>
+                            <output>jpg</output>
+                            <mapper implementation="org.codehaus.plexus.components.io.filemappers.RegExpFileMapper">
+                                <pattern>dot</pattern>
+                                <replacement>out.jpg</replacement>
+                            </mapper>
+                        </configuration>
+                    </execution>
+                    <!-- test customizing the options for "dotml" -->
+                    <execution>
+                        <id>test-dotml-options</id>
+                        <goals>
+                            <goal>dotml</goal>
+                        </goals>
+                        <configuration>
+                            <basedir>src/main/dotml2</basedir>
+                            <destdir>target/dotml2</destdir>
+                            <includes>**/*.xml,**/*.dotml</includes>
+                            <excludes>**/skip/**</excludes>
+                            <layout>neato</layout>
+                            <output>gif</output>
+                            <mapper implementation="org.codehaus.plexus.components.io.filemappers.RegExpFileMapper">
+                                <pattern>xml|dotml</pattern>
+                                <replacement>out.gif</replacement>
+                            </mapper>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

@@ -2,11 +2,55 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="http://maven.apache.org/verifications/1.0.0 http://maven.apache.org/xsd/verifications-1.0.0.xsd">
     <files>
+        <!-- check the output from the "default" configurations-->
         <file>
             <location>target/test-projects/test-dot/target/graphviz/foo.png</location>
         </file>
         <file>
             <location>target/test-projects/test-dot/target/graphviz/bar.png</location>
+        </file>
+        <!-- check the output from the customized dot configuration -->
+        <file>
+            <location>target/test-projects/test-dot/target/dot2/foo.out.jpg</location>
+        </file>
+        <file>
+            <location>target/test-projects/test-dot/target/dot2/skipme.out.jpg</location>
+            <exists>false</exists>
+        </file>
+        <file>
+            <location>target/test-projects/test-dot/target/dot2/a/foo.out.jpg</location>
+        </file>
+        <file>
+            <location>target/test-projects/test-dot/target/dot2/a/b/foo.out.jpg</location>
+        </file>
+        <file>
+            <location>target/test-projects/test-dot/target/dot2/a/b/skip</location>
+            <exists>false</exists>
+        </file>
+        <!-- check the output from the customized dot configuration -->
+        <file>
+            <location>target/test-projects/test-dot/target/dotml2/bar.out.gif</location>
+        </file>
+        <file>
+            <location>target/test-projects/test-dot/target/dotml2/baz.out.gif</location>
+        </file>
+        <file>
+            <location>target/test-projects/test-dot/target/dotml2/foo.out.gif</location>
+            <exists>false</exists>
+        </file>
+        <file>
+            <location>target/test-projects/test-dot/target/dotml2/sub/bar.out.gif</location>
+        </file>
+        <file>
+            <location>target/test-projects/test-dot/target/dotml2/sub/baz.out.gif</location>
+        </file>
+        <file>
+            <location>target/test-projects/test-dot/target/dotml2/sub/foo.out.gif</location>
+            <exists>false</exists>
+        </file>
+        <file>
+            <location>target/test-projects/test-dot/target/dotml2/sub/skip</location>
+            <exists>false</exists>
         </file>
     </files>
 </verifications>
