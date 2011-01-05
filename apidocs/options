@@ -1,24 +1,24 @@
 -classpath
-'/Volumes/personal/working/graphviz-maven-plugin/target/classes:/Users/bjacob/.m2/repository/org/apache/maven/maven-plugin-api/2.2.1/maven-plugin-api-2.2.1.jar:/Users/bjacob/.m2/repository/org/codehaus/plexus/plexus-io/1.0.1/plexus-io-1.0.1.jar:/Users/bjacob/.m2/repository/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar'
+'/Volumes/personal/working/graphviz-maven-plugin/target/checkout/target/classes:/Users/bjacob/.m2/repository/org/apache/maven/maven-plugin-api/2.2.1/maven-plugin-api-2.2.1.jar:/Users/bjacob/.m2/repository/org/codehaus/plexus/plexus-io/1.0.1/plexus-io-1.0.1.jar:/Users/bjacob/.m2/repository/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar'
 -encoding
 'UTF-8'
 -protected
 -sourcepath
-'/Volumes/personal/working/graphviz-maven-plugin/src/main/java'
+'/Volumes/personal/working/graphviz-maven-plugin/target/checkout/src/main/java'
 -author
 -bottom
 'Copyright &#169; 2011. All Rights Reserved.'
 -charset
 'UTF-8'
 -d
-'/Volumes/personal/working/graphviz-maven-plugin/target/site/apidocs'
+'/Volumes/personal/working/graphviz-maven-plugin/target/checkout/target/site/apidocs'
 -docencoding
 'UTF-8'
 -doctitle
-'Graphviz Maven Plugin 1.0-SNAPSHOT API'
+'Graphviz Maven Plugin 1.0 API'
 -link
 'http://java.sun.com/javase/6/docs/api'
 -use
 -version
 -windowtitle
-'Graphviz Maven Plugin 1.0-SNAPSHOT API'
+'Graphviz Maven Plugin 1.0 API'
