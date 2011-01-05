@@ -37,8 +37,8 @@ graph { foo--bar }
     <<<src/main/dotml>>> to contain XML files in the
     {{{http://www.martin-loetzsch.de/DOTML}DOTML}} format.
 
-    For all the features and options, read the documents for the {{{/dot-mojo.xml}graphviz:dot}}
-    and {{{/dotml-mojo.xml}graphviz:dotml}} mojos.
+    For all the features and options, read the documents for the {{{/dot-mojo.html}graphviz:dot}}
+    and {{{/dotml-mojo.html}graphviz:dotml}} mojos.
 
 ======
 
